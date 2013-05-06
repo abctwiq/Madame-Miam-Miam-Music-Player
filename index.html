@@ -7,15 +7,15 @@
     <meta name="description" content="Madame-miam-miam-music-player : A nice music player" />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-	<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/custom.css">
-	
-	 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+	<link rel="stylesheet" type="text/css" href="stylesheets/custom.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <title>Madame-miam-miam-music-player</title>
 	<script>
 	$(function() {
-		$( "#tabs" ).tabs();
+		$("#tabs").tabs();
 	});
 	</script>
   </head>
@@ -24,14 +24,16 @@
 
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/MBach/Madame-Miam-Miam-Music-Player">View on GitHub</a>
+        <header class="inner" style="max-width: 640px">
 
           <h1 id="project_title">Madame Miam-Miam's Music Player</h1>
           <h2 id="project_tagline">A nice music player</h2>
 
         </header>
+		
     </div>
+	<span id="forkongithub"><a href="https://github.com/MBach/Madame-Miam-Miam-Music-Player">Fork me on GitHub</a></span>
+	 
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
@@ -39,25 +41,62 @@
 
 	  <div id="tabs">
 		<ul>
-		<li><a href="#tabs-1">About</a></li>
-		<li><a href="#tabs-2">Downloads</a></li>
-		<li><a href="#tabs-3">Gallery</a></li>
-		<li><a href="#tabs-4">Contribute</a></li>
+			<li><a href="#tab-about">About</a></li>
+			<li><a href="#tab-downloads">Downloads</a></li>
+			<li><a href="#tab-gallery">Gallery</a></li>
+			<li><a href="#tab-contribute">Contribute</a></li>
 		</ul>
-		<div id="tabs-1">
-		<p>About section</p>
+
+		<div id="tab-about" class="center">
+			<p>Madame Miam-Miam's Music Player is an all new MP3 player. Yet another player?</p>
+			<p>What's inside?</p>
+			<ul>
+				<li>Read .mp3, .m4a (MP4), .flac, .ogg, .oga (OGG Vorbis), .asf, .ape (Monkey Audio)</li>
+				<li>Read and Edit lots of Tags using Taglib</li>
+				<li>Customize everything: User Interface, Covers, Shortcuts, Buttons, Themes</li>
+				<li>Fast and reliable</li>
+			</ul>
+			<p>What is NOT inside?</p>
+			<ul>
+				<li>Automatically search from the Internet for lyrics</li>
+				<li>Automatically search from the Internet  for Tags</li>
+				<li>Automatically display informations about Artist / Albums / etc from Wikipedia</li>
+				<li>Well, it's just reading audio files, but it's doing it well!</li>
+			</ul>
+			<p>This software was developped using Qt5 and Taglib</p>
 		</div>
-		<div id="tabs-2">
-			<p style="clear:both; padding-top: 20px">Windows 8</p>
+
+		<div id="tab-downloads" class="center">
+			<p style="clear:both; padding-top: 20px"><img src="images/8.png" alt="Windows 8" style="border:0; width: 16px; vertical-align: -17px">Windows 8</p>
 			<a href="http://sourceforge.net/projects/miammusicplayer/files/0.4.1/MmeMiamMiamMusicPlayer_0.4.1_windows_x86.7z/download">Mme MiamMiam Music Player 0.4.1</a>
-			<p>Ubuntu 13.10 (64 bits)</p>
+			<p><img src="images/ubuntu.png" alt="Ubuntu 13.10" style="border:0; width: 16px; vertical-align: -17px">Ubuntu 13.10 (64 bits)</p>
 			<a href="http://sourceforge.net/projects/miammusicplayer/files/0.4.1/mme-miam-miam-music-player.deb/download">Mme MiamMiam Music Player 0.4.1</a>
 		</div>
-		<div id="tabs-3">
-		<p>Gallery section</p>
+
+		<div id="tab-gallery" style="width: 1000px; margin: 0 auto; text-align: center">
+		
+			<img src="images/gallery/general_overview.png" title="General overview" />
+			<img src="images/gallery/tag_editor.png" title="Tag editor" />
+			<img style="width:669px" src="images/gallery/customize-buttons.png" title="Buttons" />
+			<img style="width:658px" src="images/gallery/customize-fonts.png" title="Fonts">
+			<img style="width:669px" src="images/gallery/customize-colors.png" title="Colors">
+			<img style="width:669px" src="images/gallery/customize-library.png" title="Library">
+			<img src="images/gallery/MmeMiamMiamMusicPlayer_in_yellow.png" title="Customize colors, buttons, etc.">
+			<img style="width:698px" src="images/gallery/options-library.png" title="Library">
+			<img style="width:759px" src="images/gallery/options-languages.png" title="Languages">
+			<img style="width:698px" src="images/gallery/options-shortcuts.png" title="Shortcuts">
+					 
 		</div>
-		<div id="tabs-4">
-		<p>Contribute section</p>
+
+		<div id="tab-contribute" class="center">
+			<p>Lots of things needs to be done! Work isn't over yet</p>
+			<ul>
+				<li>Be a beta-tester!</li>
+				<li>Translate this player in your language</li>
+				<li>Improve the design of the library</li>
+				<li>Make a build for Mac OS X</li>
+				<li>And what ever you would like to have! (I'd like a SimPlayList like foobar)</li>
+			</ul>
 		</div>
 	</div>
 
@@ -66,13 +105,10 @@
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
-      <footer class="inner">
+      <footer class="inner" style="max-width: 640px">
         <p class="copyright">Madame-miam-miam-music-player maintained by <a href="https://github.com/MBach">MBach</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+		<p>Project page on <a href="https://sourceforge.net/projects/miammusicplayer/">SourceForge</a> &mdash; Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-
-    
-
   </body>
 </html>
