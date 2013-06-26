@@ -3,4 +3,8 @@
 #############
 
 build/
-*.pro.user
+*.pro.user*
+
+packaging/windows/*.msi
+packaging/windows/*.wixobj
+packaging/windows/*.wixpdb
