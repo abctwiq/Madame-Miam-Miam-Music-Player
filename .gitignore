@@ -3,6 +3,7 @@
 #############
 
 build/
+code/
 *.pro.user*
 
 packaging/windows/*.msi
